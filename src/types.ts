@@ -1,7 +1,6 @@
 export type SliderSlideProps = {
-  id:string;
+  id: string;
   img: string;
   alt?: string;
-  width: string;
-  height: string;
+  text?: string;
 };

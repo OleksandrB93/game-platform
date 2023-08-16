@@ -15,20 +15,38 @@ import ArrowRightIcon from "../CustomIcons/ArrowIcon";
 
 interface SliderProps {
   slides: SliderSlideProps[];
-  disableCoverFlow?: boolean;
+  effect?: string;
+  grabCursor?: boolean;
+  centeredSlides?: boolean;
+  slidesPerView?: number;
+  spaceBetween?: number;
+  initialSlide?: number;
+  arrowNavigation: boolean;
+  heroSlider?: boolean;
+  gameSlider?: boolean;
 }
 
-const Slider = ({ slides, disableCoverFlow }: SliderProps) => {
+const Slider = ({
+  slides,
+  arrowNavigation,
+  effect,
+  centeredSlides,
+  slidesPerView,
+  spaceBetween,
+  initialSlide,
+  heroSlider,
+  gameSlider,
+}: SliderProps) => {
   return (
     <div>
       <Swiper
-        className="max-w-[390px] mb-4 mt-12  relative"
-        effect={disableCoverFlow ? "slide" : "coverflow"}
+        className="max-w-[390px] h-[222px]  mb-4 mt-12  relative"
+        effect={effect}
         grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={3}
-        spaceBetween={50}
-        initialSlide={1}
+        centeredSlides={centeredSlides}
+        slidesPerView={slidesPerView}
+        spaceBetween={spaceBetween}
+        initialSlide={initialSlide}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -41,25 +59,36 @@ const Slider = ({ slides, disableCoverFlow }: SliderProps) => {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        // navigation={true}
-        navigation={{
-          nextEl: ".swiper-next",
-          prevEl: ".swiper-prev",
-        }}
+        navigation={
+          arrowNavigation
+            ? {
+                nextEl: ".swiper-next",
+                prevEl: ".swiper-prev",
+              }
+            : false
+        }
         // pagination={{ type: "bullets", clickable: true, dynamicBullets: true }}
         modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <SliederSlide {...slide} />
+            <SliederSlide
+              {...slide}
+              gameSlider={gameSlider}
+              heroSlider={heroSlider}
+            />
           </SwiperSlide>
         ))}
-        <div className="absolute left-7 bottom-2  z-10 rotate-180 transform swiper-prev">
-          <ArrowRightIcon />
-        </div>
-        <div className="absolute right-7  bottom-2  z-10 transform  swiper-next">
-          <ArrowRightIcon />
-        </div>
+        {arrowNavigation && (
+          <>
+            <div className="absolute left-7 bottom-2 z-10 rotate-180 transform swiper-prev">
+              <ArrowRightIcon />
+            </div>
+            <div className="absolute right-7 bottom-2 z-10 transform swiper-next">
+              <ArrowRightIcon />
+            </div>
+          </>
+        )}
       </Swiper>
     </div>
   );
