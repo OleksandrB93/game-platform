@@ -40,7 +40,7 @@ const Slider = ({
   return (
     <div>
       <Swiper
-        className="max-w-[390px] h-[222px]  mb-4 mt-12  relative"
+        className="max-w-[390px] h-auto  mb-4 relative"
         effect={effect}
         grabCursor={true}
         centeredSlides={centeredSlides}
@@ -54,11 +54,11 @@ const Slider = ({
           modifier: 1,
           slideShadows: false,
         }}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
+        // autoplay={{
+        //   delay: 2000,
+        //   disableOnInteraction: false,
+        //   pauseOnMouseEnter: true,
+        // }}
         navigation={
           arrowNavigation
             ? {

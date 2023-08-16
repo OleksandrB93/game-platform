@@ -3,4 +3,5 @@ export type SliderSlideProps = {
   img: string;
   alt?: string;
   text?: string;
+  bage?: string;
 };

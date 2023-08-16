@@ -11,17 +11,12 @@ const SliederSlide = ({
   text,
   gameSlider,
   heroSlider,
+  bage,
 }: SliederSlideProps) => {
   return (
     <div>
       {heroSlider && (
-        <div
-          className={`flex justify-center items-center ${
-            gameSlider
-              ? "flex flex-col shadow-md border border-[#AECBFF] rounded-md h-[84px] w-[82px] pt-15 gap-x-0  gap-y-[6px]"
-              : "border-0"
-          } `}
-        >
+        <div className={`flex justify-center items-center`}>
           <img
             className={`min-w-[345px] bg-center bg-cover `}
             src={process.env.PUBLIC_URL + img}
@@ -32,11 +27,7 @@ const SliederSlide = ({
       )}
       {gameSlider && (
         <div
-          className={`flex justify-center items-center ${
-            gameSlider
-              ? "flex flex-col shadow-md border border-[#AECBFF] rounded-md h-[84px] w-[82px] pt-15 gap-x-0  gap-y-[6px]"
-              : "border-0"
-          } `}
+          className={`relative flex justify-center items-center my-12 "flex flex-col shadow-md border border-[#AECBFF] rounded-[12px] h-[84px] w-[84px]"`}
         >
           <img
             className={`max-w-[36px] bg-center bg-cover `}
@@ -44,6 +35,11 @@ const SliederSlide = ({
             alt={alt}
           />
           <p className="text-[10px]">{text}</p>
+          {bage && (
+            <div className="absolute z-100 -top-[12px] right-0 flex justify-center items-center w-6 h-6 rounded-full bg-red">
+              <p className="text-white">{bage}</p>
+            </div>
+          )}
         </div>
       )}
     </div>

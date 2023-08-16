@@ -8,10 +8,10 @@ import SearchIcon from "../CustomIcons/SearchIcon";
 const Header: FC = () => {
   return (
     <div className="pt-16 pb-5 bg-bg w-[100vw] flex items-center  flex-col ">
-      <div className="flex gap-x-4 mb-4">
+      <div className="flex justify-center items-center gap-x-4 mb-4">
         <div className="relative">
           <input
-            className="shadow-md rounded-2xl pl-[60px] py-[13px] bg-bg border-[1px] border-[#AECBFF] w-[293px]"
+            className="shadow-md rounded-2xl pl-[60px] py-[13px] bg-bg placeholder:text-black font-bold text-stroke text-shadow  border-[1px] border-[#AECBFF] w-[293px]"
             type="text"
             placeholder="Пошук ігор"
           />
@@ -22,7 +22,7 @@ const Header: FC = () => {
         <BurgerIcon />
       </div>
       <div className="flex gap-x-4">
-        <Button title="Реєстрація" icon={<AddUserIcon />} />
+        <Button title="Реєстрація" icon={<AddUserIcon />} stroke={true} />
         <Button title="Увійти" icon={<Exit />} bg />
       </div>
     </div>

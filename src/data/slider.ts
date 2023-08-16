@@ -26,6 +26,7 @@ export const categorySlider = [
     text: "Для тебе",
     width: "36px",
     height: "36px",
+    bage: "46",
   },
   {
     id: "2",
@@ -33,6 +34,7 @@ export const categorySlider = [
     text: "Грін",
     width: "36px",
     height: "36px",
+    bage: "",
   },
   {
     id: "3",
@@ -40,6 +42,7 @@ export const categorySlider = [
     text: "Азартні",
     width: "36px",
     height: "36px",
+    bage: "",
   },
   {
     id: "4",
@@ -47,6 +50,7 @@ export const categorySlider = [
     text: "Новинки",
     width: "36px",
     height: "36px",
+    bage: "18",
   },
   {
     id: "5",
@@ -54,6 +58,7 @@ export const categorySlider = [
     text: "Для дівчат",
     width: "36px",
     height: "36px",
+    bage: "5",
   },
   {
     id: "6",
@@ -61,6 +66,7 @@ export const categorySlider = [
     text: "Кіно",
     width: "36px",
     height: "36px",
+    bage: "",
   },
   {
     id: "7",
@@ -68,6 +74,7 @@ export const categorySlider = [
     text: "Бонусні",
     width: "36px",
     height: "36px",
+    bage: "",
   },
   {
     id: "8",
@@ -75,6 +82,7 @@ export const categorySlider = [
     text: "Мега",
     width: "36px",
     height: "36px",
+    bage: "",
   },
   {
     id: "9",
@@ -82,6 +90,7 @@ export const categorySlider = [
     text: "Оновлені",
     width: "36px",
     height: "36px",
+    bage: "",
   },
   {
     id: "10",
@@ -89,6 +98,7 @@ export const categorySlider = [
     text: "Сімки",
     width: "36px",
     height: "36px",
+    bage: "",
   },
   {
     id: "11",
@@ -96,6 +106,7 @@ export const categorySlider = [
     text: "Плейтіві",
     width: "36px",
     height: "36px",
+    bage: "",
   },
   {
     id: "12",
@@ -103,6 +114,7 @@ export const categorySlider = [
     text: "Джекпот",
     width: "36px",
     height: "36px",
+    bage: "",
   },
   {
     id: "13",
@@ -110,6 +122,7 @@ export const categorySlider = [
     text: "Карти",
     width: "36px",
     height: "36px",
+    bage: "",
   },
   {
     id: "14",
@@ -117,5 +130,6 @@ export const categorySlider = [
     text: "Всі ігри",
     width: "36px",
     height: "36px",
+    bage: "",
   },
 ];

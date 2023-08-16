@@ -14,7 +14,7 @@ function App() {
         <Header />
       </header>
       <main className="flex flex-col">
-        <section className="">
+        <section className="mt-12">
           <Slider
             slides={heroSlider}
             arrowNavigation={true}
@@ -26,9 +26,10 @@ function App() {
             initialSlide={1}
             heroSlider={true}
           />
-          <Button title="Детальніше" icon={<MoreCircle />} bg width="345px" />
+          <Button title="Детальніше" icon={<MoreCircle />} bg stroke={true} width="345px" 
+          />
         </section>
-        <section>
+        <section className="">
           <Slider
             slides={categorySlider}
             effect={"slide"}
