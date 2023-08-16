@@ -6,7 +6,7 @@ import "swiper/css/effect-coverflow";
 import SliederSlide from "./SliderSlide";
 import { SliderSlideProps } from "../types";
 import {
-  EffectCoverflow, 
+  EffectCoverflow,
   Pagination,
   Autoplay,
   Navigation,
@@ -18,7 +18,7 @@ interface SliderProps {
   disableCoverFlow?: boolean;
 }
 
-const Slider = ({ slides, disableCoverFlow  }: SliderProps) => {
+const Slider = ({ slides, disableCoverFlow }: SliderProps) => {
   return (
     <div>
       <Swiper
@@ -51,7 +51,7 @@ const Slider = ({ slides, disableCoverFlow  }: SliderProps) => {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <SliederSlide {...slide} />
+            <SliederSlide {...slide} width={slide.width} />
           </SwiperSlide>
         ))}
         <div className="absolute left-7 bottom-2  z-10 rotate-180 transform swiper-prev">
