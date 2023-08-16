@@ -16,6 +16,9 @@ module.exports = {
         bgSwiper: "",
         borderSwiper: "",
       },
+      width:{
+        widthSm:"345px"
+      },
       screens: {
         sm: "390px",
         // => @media (min-width: 390px)

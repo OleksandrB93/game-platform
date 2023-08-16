@@ -22,7 +22,7 @@ const Slider = ({ slides, disableCoverFlow }: SliderProps) => {
   return (
     <div>
       <Swiper
-        className="w-[390px] mb-4 mt-12  relative"
+        className="max-w-[390px] mb-4 mt-12  relative"
         effect={disableCoverFlow ? "slide" : "coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -51,7 +51,7 @@ const Slider = ({ slides, disableCoverFlow }: SliderProps) => {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <SliederSlide {...slide} width={slide.width} />
+            <SliederSlide {...slide} />
           </SwiperSlide>
         ))}
         <div className="absolute left-7 bottom-2  z-10 rotate-180 transform swiper-prev">
