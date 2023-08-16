@@ -1,11 +1,65 @@
-import { Theme } from "@emotion/react";
+export interface Theme {
+  colors: {
+    white: string;
+    black: string;
+    bg:string;
+    bgAccent: string;
+    textAccent: string;
+    text: string;
+    bgSwiper: string;
+    borderSwiper: string;
+  };
+  transition: {
+    transition: string;
+  };
+  fontSizes: {
+    xs: string;
+    s: string;
+    m: string;
+    ml: string;
+    mll: string;
+    n: string;
+    nl: string;
+    l: string;
+    lx: string;
+    xl: string;
+  };
+  fontWeights: {
+    text: number;
+    heading: number;
+    semiBold: number;
+    logo: number;
+  };
+  sizes: {
+    buttons: {
+      normal: string;
+    };
+    small: string;
+    normal: string;
+    wide: string;
+  };
+  fonts: {
+    mainFamily: string;
+  };
+  breakpoints: {
+    sm: {
+      media: string;
+      width: string;
+    };
+    lg: {
+      media: string;
+      width: string;
+    };
+  };
+}
 
-export  const theme:Theme = {
+export const theme: Theme = {
   colors: {
     white: "white",
     black: "black",
 
-    bgAccent: "#FFE066",
+    bg: "#D9E4F9",
+    bgAccent: "#ffe066",
     textAccent: "#0051E5",
     text: "#403F3B",
 

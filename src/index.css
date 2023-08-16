@@ -1,6 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import-normalize; /* bring in normalize.css styles */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
-
 *,
 *::before,
 *::after {
@@ -47,6 +49,9 @@ body {
   font-family: 'Barlow', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  @apply  h-full w-full
 }
 
 code {

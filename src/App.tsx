@@ -1,14 +1,22 @@
 import "./App.css";
-import { ThemeProvider } from "@emotion/react";
+import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 import Header from "./components/Header";
+import Slider from "./components/Slider";
+import { heroSlider } from "./data/slider";
+import Button from "./components/Button";
+import MoreCircle from "./CustomIcons/MoreCircle";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ border: "1px solid teal" }}>
+      <header>
         <Header />
-      </div>
+      </header>
+      <main className="flex flex-col">
+        <Slider slides={heroSlider} />
+        <Button title="Детальніше" icon={<MoreCircle />} bg width="345"/>
+      </main>
     </ThemeProvider>
   );
 }
