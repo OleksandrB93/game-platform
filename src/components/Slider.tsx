@@ -24,6 +24,7 @@ interface SliderProps {
   arrowNavigation: boolean;
   heroSlider?: boolean;
   gameSlider?: boolean;
+  feedbackSlider?: boolean;
   title: string;
 }
 
@@ -37,6 +38,7 @@ const Slider = ({
   initialSlide,
   heroSlider,
   gameSlider,
+  feedbackSlider,
   title,
 }: SliderProps) => {
   return (
@@ -79,6 +81,7 @@ const Slider = ({
               {...slide}
               gameSlider={gameSlider}
               heroSlider={heroSlider}
+              feedbackSlider={feedbackSlider}
             />
           </SwiperSlide>
         ))}

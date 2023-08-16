@@ -1,6 +1,7 @@
 const ArrowLeftGameIcon = () => {
   return (
     <svg
+      className="cursor-pointer"
       width="39"
       height="40"
       viewBox="0 0 39 40"

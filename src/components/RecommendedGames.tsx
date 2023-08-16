@@ -10,7 +10,7 @@ const RecommendedGames = ({ title, games }: GameArrayProps) => {
       <img className="mb-8" src={process.env.PUBLIC_URL + title} alt="title" />
       <ul className="grid grid-cols-2 gap-4 mb-2">
         {games.map((game) => (
-          <li className="relative cursor-pointer">
+          <li key={game.id} className="relative cursor-pointer">
             <img src={process.env.PUBLIC_URL + game.poster} alt="" />
             {game.bage && (
               <div className="absolute top-1 right-1 w-[86px] flex justify-center items-center bg-red rounded-full font-sm text-white text-[15px]">

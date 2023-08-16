@@ -4,6 +4,9 @@ export type SliderSlideProps = {
   alt?: string;
   text?: string;
   bage?: string;
+  about?: string;
+  fullName?: string;
+  job?: string;
 };
 
 export type Game = {
@@ -17,3 +20,10 @@ export type GameArrayProps = {
   title: string;
   games: Game[];
 };
+
+export type NavLink = {
+  id: string;
+  pathname: string;
+}
+
+
