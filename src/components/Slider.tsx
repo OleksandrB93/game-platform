@@ -6,7 +6,7 @@ import "swiper/css/effect-coverflow";
 import SliederSlide from "./SliderSlide";
 import { SliderSlideProps } from "../types";
 import {
-  EffectCoverflow,
+  EffectCoverflow, 
   Pagination,
   Autoplay,
   Navigation,
@@ -15,14 +15,15 @@ import ArrowRightIcon from "../CustomIcons/ArrowIcon";
 
 interface SliderProps {
   slides: SliderSlideProps[];
+  disableCoverFlow?: boolean;
 }
 
-const Slider = ({ slides }: SliderProps) => {
+const Slider = ({ slides, disableCoverFlow  }: SliderProps) => {
   return (
     <div>
       <Swiper
-        className="w-[390px]  my-12  relative"
-        effect={"coverflow"}
+        className="w-[390px] mb-4 mt-12  relative"
+        effect={disableCoverFlow ? "slide" : "coverflow"}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={3}

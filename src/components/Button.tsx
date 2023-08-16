@@ -9,7 +9,7 @@ const Button = ({ title, icon, bg, width }: ButtonProps) => {
   return (
     <button
       className={`max-w-[390px] max-h-[56px] mx-auto flex justify-center items-center px-[15.25px] py-[17px] gap-x-2 ${
-        width ? `w-[${width}px]` : ""
+        width ? `w-[345px]` : "w-[165px]"
       } rounded-2xl ${bg ? "bg-bgAccent" : "bg-bg"} ${
         bg ? "border-0" : "border-[2px] border-textAccent"
       }`}
