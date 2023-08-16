@@ -26,6 +26,9 @@ module.exports = {
         lg: "1920px",
         // => @media (min-width: 1920px)
       },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif']
+      },
     },
   },
   plugins: [],

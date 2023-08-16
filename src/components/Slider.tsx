@@ -24,6 +24,7 @@ interface SliderProps {
   arrowNavigation: boolean;
   heroSlider?: boolean;
   gameSlider?: boolean;
+  title: string;
 }
 
 const Slider = ({
@@ -36,9 +37,11 @@ const Slider = ({
   initialSlide,
   heroSlider,
   gameSlider,
+  title,
 }: SliderProps) => {
   return (
     <div>
+      <h2 className="visually-hidden">{title}</h2>
       <Swiper
         className="max-w-[390px] h-auto  mb-4 relative"
         effect={effect}
@@ -54,11 +57,11 @@ const Slider = ({
           modifier: 1,
           slideShadows: false,
         }}
-        // autoplay={{
-        //   delay: 2000,
-        //   disableOnInteraction: false,
-        //   pauseOnMouseEnter: true,
-        // }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         navigation={
           arrowNavigation
             ? {

@@ -6,6 +6,8 @@ import Slider from "./components/Slider";
 import { heroSlider, categorySlider } from "./data/slider";
 import Button from "./components/Button";
 import MoreCircle from "./CustomIcons/MoreCircle";
+import RecommendedGames from "./components/RecommendedGames";
+import { recommendedGames } from "./data/recomendedGames";
 
 function App() {
   return (
@@ -25,8 +27,14 @@ function App() {
             spaceBetween={50}
             initialSlide={1}
             heroSlider={true}
+            title="Hero slider"
           />
-          <Button title="Детальніше" icon={<MoreCircle />} bg stroke={true} width="345px" 
+          <Button
+            title="Детальніше"
+            icon={<MoreCircle />}
+            bg
+            stroke={true}
+            width="345px"
           />
         </section>
         <section className="">
@@ -36,10 +44,17 @@ function App() {
             grabCursor={true}
             centeredSlides={false}
             slidesPerView={4}
-            spaceBetween={10}
+            spaceBetween={0}
             initialSlide={0}
             arrowNavigation={false}
             gameSlider={true}
+            title="game slider"
+          />
+        </section>
+        <section className="">
+          <RecommendedGames
+            title="/imgs/recommendedGames/recGame.png"
+            games={recommendedGames}
           />
         </section>
       </main>
