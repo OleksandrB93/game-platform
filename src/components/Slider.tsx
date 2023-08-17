@@ -78,16 +78,6 @@ const Slider = ({
         modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
         breakpoints={breackpoints}
       >
-        {heroSlider && (
-          <div className="hidden lg:block  absolute z-50  bottom-[30%] right-[30%]">
-            <Button
-              title="Детальніше"
-              icon={<MoreCircle />}
-              bg
-              stroke={true}
-            />
-          </div>
-        )}
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <SliederSlide

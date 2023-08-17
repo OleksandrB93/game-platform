@@ -1,6 +1,9 @@
 export type SliderSlideProps = {
   id: string;
   img: string;
+  img2x?: string;
+  imgLG?: string;
+  imgLG2x?: string;
   alt?: string;
   text?: string;
   bage?: string;
@@ -20,7 +23,6 @@ export type GameArrayProps = {
   games: Game[];
 };
 
-
 export interface NavLinkProps {
   navLink: NavLink[];
 }
@@ -28,6 +30,4 @@ export interface NavLinkProps {
 export type NavLink = {
   id: string;
   pathname: string;
-}
-
-
+};

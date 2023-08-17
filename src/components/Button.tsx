@@ -10,7 +10,7 @@ const Button = ({ title, icon, bg, width, stroke }: ButtonProps) => {
   return (
     <button
       className={`max-w-[390px] max-h-[56px] mx-auto flex justify-center items-center px-[15.25px] py-[17px] gap-x-2 
-      hover:shadow-md hover:translate-y-[-1px] transition
+      hover:shadow-md transition
       ${
         width ? `w-widthSm` : "w-[165px]"
       } rounded-2xl ${bg ? "bg-bgAccent" : "bg-bg"} ${

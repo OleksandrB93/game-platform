@@ -1,4 +1,6 @@
+import MoreCircle from "../CustomIcons/MoreCircle";
 import { SliderSlideProps } from "../types";
+import Button from "./Button";
 
 interface SliederSlideProps extends SliderSlideProps {
   gameSlider?: boolean;
@@ -8,6 +10,9 @@ interface SliederSlideProps extends SliderSlideProps {
 
 const SliederSlide = ({
   img,
+  img2x,
+  imgLG,
+  imgLG2x,
   alt,
   text,
   gameSlider,
@@ -25,13 +30,22 @@ const SliederSlide = ({
     >
       {heroSlider && (
         <div className={`flex justify-center items-center`}>
-          <img
-            className={`min-w-[345px] bg-center bg-cover lg:max-h-[560px]
+          <picture>
+            <source
+              media="(max-width:1919px)"
+              srcSet={`${process.env.PUBLIC_URL}${img} 1x, ${process.env.PUBLIC_URL}${img2x} 2x`}
+            />
+            <img
+              className={`min-w-[345px] bg-center bg-cover lg:max-h-[560px]
                       lg:min-w-[1120px]`}
-            src={process.env.PUBLIC_URL + img}
-            alt={alt}
-          />
-          <p className="text-[10px]">{text}</p>
+              src={`${process.env.PUBLIC_URL}${imgLG}`}
+              srcSet={`${process.env.PUBLIC_URL}${imgLG2x} 2x`}
+              alt={alt}
+            />
+          </picture>
+          <div className="hidden lg:block  absolute z-50  bottom-[30%] right-[-5%]">
+            <Button title="Детальніше" icon={<MoreCircle />} bg stroke={true} />
+          </div>
         </div>
       )}
       {gameSlider && (
@@ -43,11 +57,11 @@ const SliederSlide = ({
            `}
         >
           <img
-            className={`max-w-[36px] bg-center bg-cover`}
+            className={`w-9 lg:w-12 bg-center bg-cover`}
             src={process.env.PUBLIC_URL + img}
             alt={alt}
           />
-          <p className="text-[10px]">{text}</p>
+          <p className="text-[10px] lg:text-[14px]">{text}</p>
           {bage && (
             <div className="absolute z-100 -top-[12px] right-0 flex justify-center items-center w-6 h-6 rounded-full bg-red">
               <p className="text-white">{bage}</p>
@@ -61,13 +75,19 @@ const SliederSlide = ({
                     hover:shadow-sm`}
         >
           <div className="bg-outline w-full  h-auto  rounded-t-2xl flex justify-center items-center">
-            <img
-              className={`py-[13px] lg:py-8 lg:w-[256px]`}
-              src={process.env.PUBLIC_URL + img}
-              alt={alt}
-            />
+            <picture>
+              <source
+                media="(max-width:1919px)"
+                srcSet={`${process.env.PUBLIC_URL}${img} 1x, ${process.env.PUBLIC_URL}${img2x} 2x`}
+              />
+              <img
+                className={`py-[13px] lg:py-8 lg:w-[256px]`}
+                src={`${process.env.PUBLIC_URL}${imgLG}`}
+                srcSet={`${process.env.PUBLIC_URL}${imgLG2x} 2x`}
+                alt={alt}
+              />
+            </picture>
           </div>
-
           <div
             className="text-[16px] pl-4 pr-5 mb-5
                           lg:text-[26px] lg:pl-8"
