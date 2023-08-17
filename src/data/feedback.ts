@@ -23,3 +23,20 @@ export const feedbaks = [
     job: "Студент",
   },
 ];
+
+export const feedbackSliderBreackpoints = {
+  390: {
+    effect: "slide",
+    grabCursor: true,
+    slidesPerView: 1.5,
+    spaceBetween: 8,
+    initialSlide: 0,
+  },
+  1920: {
+    effect: "slide",
+    grabCursor: true,
+    slidesPerView: 3,
+    spaceBetween: 8,
+    initialSlide: 0,
+  },
+};

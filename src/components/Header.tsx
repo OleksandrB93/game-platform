@@ -1,17 +1,26 @@
-import { FC } from "react";
 import Button from "./Button";
 import AddUserIcon from "../CustomIcons/AddUserIcon";
 import Exit from "../CustomIcons/Login";
 import BurgerIcon from "../CustomIcons/Burger";
 import SearchIcon from "../CustomIcons/SearchIcon";
+import { NavLinkProps } from "../types";
+import NavLinkList from "./NavLinkList";
+import Language from "./Language";
 
-const Header: FC = () => {
+const Header = ({ navLink }: NavLinkProps) => {
   return (
-    <div className="pt-16 pb-5 bg-bg w-[100vw] flex items-center  flex-col ">
-      <div className="flex justify-center items-center gap-x-4 mb-4">
+    <div
+      className="pt-16 pb-5 bg-bg w-[100%] flex items-center flex-col 
+                lg:flex-row lg:pr-[112px] lg:pl-[28px] lg:pt-5"
+    >
+      <div
+        className="flex justify-center items-center gap-x-4 mb-4
+                  lg:flex-row-reverse lg:mb-0 lg:gap-x-0"
+      >
         <div className="relative">
           <input
-            className="shadow-md rounded-2xl pl-[60px] py-[13px] bg-bg placeholder:text-black font-bold text-stroke text-shadow  border-[1px] border-[#AECBFF] w-[293px]"
+            className="shadow-md rounded-2xl pl-[60px] py-[13px] bg-bg placeholder:text-black font-bold text-stroke text-shadow  border-[1px] border-[#AECBFF] w-[293px]
+                       lg:w-[480px] lg:mr-[192.5px]"
             type="text"
             placeholder="Пошук ігор"
           />
@@ -19,10 +28,23 @@ const Header: FC = () => {
             <SearchIcon />
           </div>
         </div>
+        <div className={`hidden lg:block lg:ml-[41.5px] lg:mr-[192.5px]`}>
+          <NavLinkList navLink={navLink} />
+        </div>
         <BurgerIcon />
       </div>
-      <div className="flex gap-x-4">
-        <Button title="Реєстрація" icon={<AddUserIcon />} stroke={true} />
+      <div className="lg:mr-8 hidden lg:block">
+        <Language />
+      </div>
+      <div
+        className="flex gap-x-4
+                  lg:gap-x-8"
+      >
+        <Button
+          title="Реєстрація"
+          icon={<AddUserIcon />}
+          stroke={true}
+        />
         <Button title="Увійти" icon={<Exit />} bg />
       </div>
     </div>

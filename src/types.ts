@@ -17,9 +17,13 @@ export type Game = {
 };
 
 export type GameArrayProps = {
-  title: string;
   games: Game[];
 };
+
+
+export interface NavLinkProps {
+  navLink: NavLink[];
+}
 
 export type NavLink = {
   id: string;

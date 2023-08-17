@@ -1,44 +1,33 @@
 import Facebook from "../CustomIcons/FacebookIcon";
 import InstaIcon from "../CustomIcons/InstaIcon";
-import { NavLink } from "../types";
-interface NavLinkProps {
-  navLink: NavLink[];
-}
+import { NavLinkProps } from "../types";
+import Language from "./Language";
+import NavLinkList from "./NavLinkList";
 
 const Footer = ({ navLink }: NavLinkProps) => {
   return (
-    <div className="bg-outline pt-10">
-      <ul className="flex gap-x-6 justify-center">
-        {navLink.map((link) => (
-          <li
-            className="cursor-pointer hover:text-textAccent transition"
-            key={link.pathname}
-          >
-            {link.id}
-          </li>
-        ))}
-      </ul>
-      <div className="flex justify-center items-center py-8 gap-x-8">
-        <Facebook />
-        <InstaIcon />
-      </div>
-      <div className="flex justify-center gap-1">
-        <button
-          className="hover:text-textAccent transition font-medium"
-          type="button"
-        >
-          UA
-        </button>
-        <button
-          className="hover:text-textAccent transition font-medium"
-          type="button"
-        >
-          EN
-        </button>
+    <div className="bg-[#d9e4f9]  pt-10">
+      <div className="lg:flex lg:gap-x-[598px] lg:mx-[112px]">
+        <div className="lg:flex lg:flex-row-reverse lg:gap-x-[598px]">
+          <div className="lg:my-auto lg:text-sm">
+            <NavLinkList navLink={navLink} />
+          </div>
+          <div className="flex justify-center items-center py-8 gap-x-8 lg:gap-x-16">
+            <Facebook />
+            <InstaIcon />
+          </div>
+        </div>
+        <Language />
       </div>
       <img
         src={process.env.PUBLIC_URL + "/imgs/companies.png"}
-        className="uppercase text-textAccent mx-auto py-8"
+        alt=""
+        className=" text-textAccent mx-auto py-8 lg:hidden"
+      />
+      <img
+        src={process.env.PUBLIC_URL + "/imgs/companiesLG.png"}
+        alt=""
+        className=" text-textAccent mx-auto py-8 hidden lg:block"
       />
       <p className="flex justify-center pb-10 text-xs">2015-2023</p>
     </div>

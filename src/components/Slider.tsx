@@ -12,53 +12,56 @@ import {
   Navigation,
 } from "swiper/modules";
 import ArrowRightIcon from "../CustomIcons/ArrowIcon";
+import Button from "./Button";
+import MoreCircle from "../CustomIcons/MoreCircle";
 
 interface SliderProps {
   slides: SliderSlideProps[];
-  effect?: string;
-  grabCursor?: boolean;
-  centeredSlides?: boolean;
-  slidesPerView?: number;
-  spaceBetween?: number;
-  initialSlide?: number;
-  arrowNavigation: boolean;
+  effect: string;
+  arrowNavigation?: boolean;
   heroSlider?: boolean;
   gameSlider?: boolean;
   feedbackSlider?: boolean;
   title: string;
+  breackpoints: any;
 }
 
 const Slider = ({
   slides,
   arrowNavigation,
   effect,
-  centeredSlides,
-  slidesPerView,
-  spaceBetween,
-  initialSlide,
   heroSlider,
   gameSlider,
   feedbackSlider,
   title,
+  breackpoints,
 }: SliderProps) => {
   return (
-    <div>
-      <h2 className="visually-hidden">{title}</h2>
+    <div
+      className={`${
+        feedbackSlider &&
+        "lg:bg-[#d9e4f9] lg:p-10 lg:max-w-[1696px] lg:mx-auto lg:rounded-2xl"
+      }`}
+    >
+      <img
+        className={` ${
+          feedbackSlider ? "hidden lg:block lg:mx-auto" : "visually-hidden"
+        }`}
+        src={process.env.PUBLIC_URL + title}
+        alt="title"
+      />
       <Swiper
-        className="max-w-[390px] h-auto  mb-4 relative"
+        className={`max-w-[390px] h-auto relative lg:mb-0
+                  ${heroSlider && "lg:max-w-[1900px]"}
+                  ${
+                    gameSlider &&
+                    "lg:max-w-[1696px] lg:mt-8 lg:px-5 lg:bg-[#d9e4f9] rounded-2xl"
+                  }
+                  ${
+                    feedbackSlider &&
+                    "lg:max-w-[1696px] lg:mt-8 lg:bg-[#d9e4f9] rounded-2xl"
+                  }`}
         effect={effect}
-        grabCursor={true}
-        centeredSlides={centeredSlides}
-        slidesPerView={slidesPerView}
-        spaceBetween={spaceBetween}
-        initialSlide={initialSlide}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 500,
-          modifier: 1,
-          slideShadows: false,
-        }}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
@@ -72,9 +75,19 @@ const Slider = ({
               }
             : false
         }
-        // pagination={{ type: "bullets", clickable: true, dynamicBullets: true }}
         modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
+        breakpoints={breackpoints}
       >
+        {heroSlider && (
+          <div className="hidden lg:block  absolute z-50  bottom-[30%] right-[30%]">
+            <Button
+              title="Детальніше"
+              icon={<MoreCircle />}
+              bg
+              stroke={true}
+            />
+          </div>
+        )}
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <SliederSlide
@@ -87,10 +100,16 @@ const Slider = ({
         ))}
         {arrowNavigation && (
           <>
-            <div className="absolute left-7 bottom-2 z-10 rotate-180 transform swiper-prev">
+            <div
+              className="absolute left-7 bottom-2 z-10 rotate-180 transform swiper-prev
+                            lg:left-[23%] lg:bottom-[50%] cursor-pointer"
+            >
               <ArrowRightIcon />
             </div>
-            <div className="absolute right-7 bottom-2 z-10 transform swiper-next">
+            <div
+              className="absolute right-7 bottom-2 z-10 transform swiper-next
+                            lg:right-[23%] lg:bottom-[50%] cursor-pointer"
+            >
               <ArrowRightIcon />
             </div>
           </>
