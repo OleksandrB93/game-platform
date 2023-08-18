@@ -24,10 +24,10 @@ export type GameArrayProps = {
 };
 
 export interface NavLinkProps {
-  navLink: NavLink[];
+  navLink: any
 }
 
 export type NavLink = {
-  id: string;
-  pathname: string;
+  id?: string;
+  pathname?: string;
 };

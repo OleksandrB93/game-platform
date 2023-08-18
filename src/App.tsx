@@ -3,29 +3,28 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
-import {
-  heroSlider,
-  categorySlider,
-  categorySliderBreackpoints,
-  heroSliderBreackpoints,
-} from "./data/slider";
+import { heroSlider, categorySlider } from "./data/slider";
 import Button from "./components/Button";
 import MoreCircle from "./CustomIcons/MoreCircle";
 import RecommendedGames from "./components/RecommendedGames";
 import { recommendedGames } from "./data/recomendedGames";
-import { feedbackSliderBreackpoints, feedbaks } from "./data/feedback";
+import { feedbaks } from "./data/feedback";
 import OurContacts from "./components/OurContacts";
 import Letter from "./components/Letter";
 import Footer from "./components/Footer";
 import { NavLink } from "./data/navLink";
 
+import {
+  categorySliderBreackpoints,
+  feedbackSliderBreackpoints,
+  heroSliderBreackpoints,
+} from "./configs/sliderConfig";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <header>
         <Header navLink={NavLink} />
-      </header>
-      <main className="flex flex-col">
+      <main className="flex flex-col bg-bgPrimary">
         <section className="mt-12">
           <Slider
             slides={heroSlider}
@@ -51,7 +50,7 @@ function App() {
             slides={categorySlider}
             gameSlider={true}
             title="game slider"
-            breackpoints={categorySliderBreackpoints}
+            breackpoints={categorySliderBreackpoints} 
           />
         </section>
         <section className="">
@@ -69,7 +68,7 @@ function App() {
             arrowNavigation={false}
             feedbackSlider={true}
             title="/imgs/feedback/Відгуки.png"
-            breackpoints={feedbackSliderBreackpoints}
+            breackpoints={feedbackSliderBreackpoints} 
           />
         </section>
         <section className="lg:flex gap-x-8">

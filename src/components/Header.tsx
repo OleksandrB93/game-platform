@@ -10,7 +10,7 @@ import ThemeMode from "./ThemeMode";
 
 const Header = ({ navLink }: NavLinkProps) => {
   return (
-    <div
+    <header
       className="pt-16 pb-5 bg-bg w-[100%] flex items-center flex-col 
                 lg:flex-row lg:pr-[112px] lg:pl-[28px] lg:pt-5"
     >
@@ -47,7 +47,7 @@ const Header = ({ navLink }: NavLinkProps) => {
         <Button title="Реєстрація" icon={<AddUserIcon />} stroke={true} />
         <Button title="Увійти" icon={<Exit />} bg />
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -1,11 +1,16 @@
 import MoreCircle from "../CustomIcons/MoreCircle";
 import { SliderSlideProps } from "../types";
 import Button from "./Button";
+import CountUp from "react-countup";
+import { motion } from "framer-motion";
+import { listVAriatns1, listVAriatns2 } from "../configs/motion";
+import { useTranslation } from "react-i18next";
 
 interface SliederSlideProps extends SliderSlideProps {
   gameSlider?: boolean;
   heroSlider?: boolean;
   feedbackSlider?: boolean;
+  i: number;
 }
 
 const SliederSlide = ({
@@ -22,14 +27,22 @@ const SliederSlide = ({
   about,
   job,
   fullName,
+  i,
 }: SliederSlideProps) => {
+  const { t } = useTranslation();
   return (
     <div
       className="max-w-[345px]
                 lg:max-w-[1120px]"
     >
       {heroSlider && (
-        <div className={`flex justify-center items-center`}>
+        <motion.div
+          variants={listVAriatns1}
+          initial="hidden"
+          animate="visible"
+          custom={i}
+          className={`flex justify-center items-center`}
+        >
           <picture>
             <source
               media="(max-width:1919px)"
@@ -46,12 +59,16 @@ const SliederSlide = ({
           <div className="hidden lg:block  absolute z-50  bottom-[30%] right-[-5%]">
             <Button title="Детальніше" icon={<MoreCircle />} bg stroke={true} />
           </div>
-        </div>
+        </motion.div>
       )}
       {gameSlider && (
-        <div
+        <motion.div
+          variants={listVAriatns2}
+          initial="hidden"
+          animate="visible"
+          custom={i}
           className={`relative justify-center items-center my-12 flex flex-col gap-y-[6px] shadow-md border
-           border-bgSecond rounded-[12px] h-[84px] w-[84px]
+           border-bgSecond rounded-[12px] h-[84px] w-[84px] ml-[6px]
            hover:border-textAccent hover:bg-outline transition
            lg:my-5 lg:ml-5 lg:border-bgSecond lg:bg-bg lg:h-[111px] lg:w-[111px]
            `}
@@ -61,13 +78,17 @@ const SliederSlide = ({
             src={process.env.PUBLIC_URL + img}
             alt={alt}
           />
-          <p className="text-[10px] lg:text-[14px]">{text}</p>
+          <p className="text-[10px] lg:text-[14px] text-textLink">
+            {text}
+          </p>
           {bage && (
             <div className="absolute z-100 -top-[12px] right-0 flex justify-center items-center w-6 h-6 rounded-full bg-red">
-              <p className="text-white">{bage}</p>
+              <p className="text-white">
+                <CountUp start={0} end={Number(bage)} duration={4} />
+              </p>
             </div>
           )}
-        </div>
+        </motion.div>
       )}
       {feedbackSlider && (
         <div

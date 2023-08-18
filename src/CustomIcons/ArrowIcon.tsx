@@ -2,9 +2,8 @@
 const ArrowRightIcon = () => {
   return (
     <svg
-    className="w-[48px]"
-      width=""
-      height=""
+      width="48"
+      height="48"
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

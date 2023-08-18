@@ -15,6 +15,7 @@ module.exports = {
         textAccent: "rgb(var(--color-textAccent) / <alpha-value>)",
         text: "rgb(var(--color-text) / <alpha-value>)",
         textLink: "rgb(var(--color-textLink) / <alpha-value>)",
+        bgPrimary: "rgb(var(--color-bgPrimary) / <alpha-value>)",
 
         bgSwiper: "",
         borderSwiper: "",

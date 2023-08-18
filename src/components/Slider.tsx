@@ -22,6 +22,7 @@ interface SliderProps {
   feedbackSlider?: boolean;
   title: string;
   breackpoints: any;
+  categorySliderI18?: any;
 }
 
 const Slider = ({
@@ -33,10 +34,11 @@ const Slider = ({
   feedbackSlider,
   title,
   breackpoints,
+  categorySliderI18,
 }: SliderProps) => {
   return (
-    <div
-      className={`${
+    <section
+      className={` ${
         feedbackSlider &&
         "lg:bg-bg lg:p-10 lg:max-w-[1696px] lg:mx-auto lg:rounded-2xl"
       }`}
@@ -76,13 +78,14 @@ const Slider = ({
         modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
         breakpoints={breackpoints}
       >
-        {slides.map((slide) => (
+        {slides.map((slide, i) => (
           <SwiperSlide key={slide.id}>
             <SliederSlide
               {...slide}
               gameSlider={gameSlider}
               heroSlider={heroSlider}
               feedbackSlider={feedbackSlider}
+              i={i}
             />
           </SwiperSlide>
         ))}
@@ -103,7 +106,7 @@ const Slider = ({
           </>
         )}
       </Swiper>
-    </div>
+    </section>
   );
 };
 

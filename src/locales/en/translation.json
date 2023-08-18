@@ -1,0 +1,29 @@
+{
+  "language": {
+    "ua": "UA",
+    "en": "EN"
+  },
+  "navLinkList": {
+    "games": "Games",
+    "tournaments": "Tournaments",
+    "news": "News",
+    "about": "About",
+    "contacts": "Contacts"
+  },
+  "sliderTexts": {
+    "forYou": "For You",
+    "green": "Green",
+    "gamble": "Gamble",
+    "newGame": "New Games",
+    "forGirl": "For Girls",
+    "movies": "Movies",
+    "bonus": "Bonus",
+    "mega": "Mega",
+    "update": "Updated",
+    "threeSeven": "Sevens",
+    "playson": "Playson",
+    "jackpot": "Jackpot",
+    "tableGames": "Table Games",
+    "allGame": "All Games"
+  }
+}

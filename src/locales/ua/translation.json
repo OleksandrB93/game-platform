@@ -1,0 +1,29 @@
+{
+  "language": {
+    "ua": "УКР",
+    "en": "АНГЛ"
+  },
+  "navLinkList": {
+    "games": "Ігри",
+    "tournaments": "Турніри",
+    "news": "Новини",
+    "about": "Про нас",
+    "contacts": "Контакти"
+  },
+  "sliderTexts": {
+    "forYou": "Для тебе",
+    "green": "Грін",
+    "gamble": "Азартні",
+    "newGame": "Новинки",
+    "forGirl": "Для дівчат",
+    "movies": "Кіно",
+    "bonus": "Бонусні",
+    "mega": "Мега",
+    "update": "Оновлені",
+    "threeSeven": "Сімки",
+    "playson": "Плейтіві",
+    "jackpot": "Джекпот",
+    "tableGames": "Карти",
+    "allGame": "Всі ігри"
+  }
+}
