@@ -12,8 +12,6 @@ import {
   Navigation,
 } from "swiper/modules";
 import ArrowRightIcon from "../CustomIcons/ArrowIcon";
-import Button from "./Button";
-import MoreCircle from "../CustomIcons/MoreCircle";
 
 interface SliderProps {
   slides: SliderSlideProps[];

@@ -29,7 +29,7 @@ const Footer = ({ navLink }: NavLinkProps) => {
         alt=""
         className=" text-textAccent mx-auto py-8 hidden lg:block"
       />
-      <p className="flex justify-center pb-10 text-xs">2015-2023</p>
+      <p className="flex justify-center pb-10 text-xs text-textLink">2015-2023</p>
     </div>
   );
 };

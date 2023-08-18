@@ -16,7 +16,7 @@ const OurContacts = () => {
         className=" text-textAccent mx-auto mb-4 hidden lg:block lg:mb-8"
       />
 
-      <div className="lg:flex gap-x-8">
+      <div className="lg:flex gap-x-8 text-textLink">
         <div>
           <div className="mb-4 lg:mb-8">
             <p className="text-sm mb-2 lg:text-xl">Адреса:</p>

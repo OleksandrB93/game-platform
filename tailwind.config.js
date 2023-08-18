@@ -1,19 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode:'class',
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        white: "white",
-        black: "black",
-        red: "#e71c24",
-        bg: "#D9E4F9",
-        bgSecond: "#AECBFF",
-        outline: "#AECBFF",
-        bgAccent: "#ffe066",
-        textAccent: "#0051E5",
-        text: "#403F3B",
+        white: "rgb(var(--color-white) / <alpha-value>)",
+        black: "rgb(var(--color-black) / <alpha-value>)",
+        red: "rgb(var(--color-red) / <alpha-value>)",
+        bg: "rgb(var(--color-bg) / <alpha-value>)",
+        bgSecond: "rgb(var(--color-bgSecond) / <alpha-value>)",
+        outline: "rgb(var(--color-outline) / <alpha-value>)",
+        bgAccent: "rgb(var(--color-bgAccent) / <alpha-value>)",
+        textAccent: "rgb(var(--color-textAccent) / <alpha-value>)",
+        text: "rgb(var(--color-text) / <alpha-value>)",
+        textLink: "rgb(var(--color-textLink) / <alpha-value>)",
 
         bgSwiper: "",
         borderSwiper: "",

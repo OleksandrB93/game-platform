@@ -6,6 +6,7 @@ import SearchIcon from "../CustomIcons/SearchIcon";
 import { NavLinkProps } from "../types";
 import NavLinkList from "./NavLinkList";
 import Language from "./Language";
+import ThemeMode from "./ThemeMode";
 
 const Header = ({ navLink }: NavLinkProps) => {
   return (
@@ -19,7 +20,7 @@ const Header = ({ navLink }: NavLinkProps) => {
       >
         <div className="relative">
           <input
-            className="shadow-md rounded-2xl pl-[60px] py-[13px] bg-bg placeholder:text-black font-bold text-stroke text-shadow  border-[1px] border-bgSecond w-[293px]
+            className="shadow-md rounded-2xl pl-[60px] py-[13px] bg-bg placeholder:text-textLink font-bold text-stroke text-shadow  border-[1px] border-bgSecond w-[293px]
                        lg:w-[480px] lg:mr-[192.5px]"
             type="text"
             placeholder="Пошук ігор"
@@ -31,7 +32,10 @@ const Header = ({ navLink }: NavLinkProps) => {
         <div className={`hidden lg:block lg:ml-[41.5px] lg:mr-[192.5px]`}>
           <NavLinkList navLink={navLink} />
         </div>
-        <BurgerIcon />
+        <div className="relative">
+          <BurgerIcon />
+          <ThemeMode />
+        </div>
       </div>
       <div className="lg:mr-8 hidden lg:block">
         <Language />

@@ -5,7 +5,7 @@ const NavLinkList = ({navLink}: NavLinkProps) => {
     <ul className="flex gap-x-4 justify-center">
       {navLink.map((link) => (
         <li
-          className="cursor-pointer hover:text-textAccent transition"
+          className="cursor-pointer hover:text-textAccent text-textLink transition"
           key={link.pathname}
         >
           {link.id}
