@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode:'class',
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -7,8 +8,8 @@ module.exports = {
         white: "white",
         black: "black",
         red: "#e71c24",
-
         bg: "#D9E4F9",
+        bgSecond: "#AECBFF",
         outline: "#AECBFF",
         bgAccent: "#ffe066",
         textAccent: "#0051E5",
@@ -17,8 +18,8 @@ module.exports = {
         bgSwiper: "",
         borderSwiper: "",
       },
-      width:{
-        widthSm:"345px"
+      width: {
+        widthSm: "345px",
       },
       screens: {
         sm: "390px",
@@ -27,7 +28,7 @@ module.exports = {
         // => @media (min-width: 1920px)
       },
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif']
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

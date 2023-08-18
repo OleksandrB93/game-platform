@@ -19,7 +19,7 @@ const Header = ({ navLink }: NavLinkProps) => {
       >
         <div className="relative">
           <input
-            className="shadow-md rounded-2xl pl-[60px] py-[13px] bg-bg placeholder:text-black font-bold text-stroke text-shadow  border-[1px] border-[#AECBFF] w-[293px]
+            className="shadow-md rounded-2xl pl-[60px] py-[13px] bg-bg placeholder:text-black font-bold text-stroke text-shadow  border-[1px] border-bgSecond w-[293px]
                        lg:w-[480px] lg:mr-[192.5px]"
             type="text"
             placeholder="Пошук ігор"
@@ -40,11 +40,7 @@ const Header = ({ navLink }: NavLinkProps) => {
         className="flex gap-x-4
                   lg:gap-x-8"
       >
-        <Button
-          title="Реєстрація"
-          icon={<AddUserIcon />}
-          stroke={true}
-        />
+        <Button title="Реєстрація" icon={<AddUserIcon />} stroke={true} />
         <Button title="Увійти" icon={<Exit />} bg />
       </div>
     </div>

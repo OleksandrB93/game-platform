@@ -4,7 +4,7 @@ import Button from "./Button";
 const Letter = () => {
   return (
     <div
-      className="mb-12 p-5 bg-[#d9e4f9]  w-[345px] mx-auto rounded-2xl 
+      className="mb-12 p-5 bg-bg  w-[345px] mx-auto rounded-2xl 
                     lg:w-[553px] lg:h-[584px] lg:ml-0 lg:mt-8 lg:p-10"
     >
       <img

@@ -40,7 +40,7 @@ const Slider = ({
     <div
       className={`${
         feedbackSlider &&
-        "lg:bg-[#d9e4f9] lg:p-10 lg:max-w-[1696px] lg:mx-auto lg:rounded-2xl"
+        "lg:bg-bg lg:p-10 lg:max-w-[1696px] lg:mx-auto lg:rounded-2xl"
       }`}
     >
       <img
@@ -55,11 +55,11 @@ const Slider = ({
                   ${heroSlider && "lg:max-w-[1900px]"}
                   ${
                     gameSlider &&
-                    "lg:max-w-[1696px] lg:mt-8 lg:px-5 lg:bg-[#d9e4f9] rounded-2xl"
+                    "lg:max-w-[1696px] lg:mt-8 lg:px-5 lg:bg-bg rounded-2xl"
                   }
                   ${
                     feedbackSlider &&
-                    "lg:max-w-[1696px] lg:mt-8 lg:bg-[#d9e4f9] rounded-2xl"
+                    "lg:max-w-[1696px] lg:mt-8 lg:bg-bg rounded-2xl"
                   }`}
         effect={effect}
         autoplay={{

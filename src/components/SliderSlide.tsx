@@ -51,9 +51,9 @@ const SliederSlide = ({
       {gameSlider && (
         <div
           className={`relative justify-center items-center my-12 flex flex-col gap-y-[6px] shadow-md border
-           border-[#AECBFF] rounded-[12px] h-[84px] w-[84px]
-           hover:border-textAccent hover:bg-outline hover:translate-y-[-1px] transition
-           lg:my-5 lg:ml-5 lg:border-[#aecbff] lg:bg-[#d9e4f9] lg:h-[111px] lg:w-[111px]
+           border-bgSecond rounded-[12px] h-[84px] w-[84px]
+           hover:border-textAccent hover:bg-outline transition
+           lg:my-5 lg:ml-5 lg:border-bgSecond lg:bg-bg lg:h-[111px] lg:w-[111px]
            `}
         >
           <img

@@ -6,7 +6,7 @@ import NavLinkList from "./NavLinkList";
 
 const Footer = ({ navLink }: NavLinkProps) => {
   return (
-    <div className="bg-[#d9e4f9]  pt-10">
+    <div className="bg-bg  pt-10">
       <div className="lg:flex lg:gap-x-[598px] lg:mx-[112px]">
         <div className="lg:flex lg:flex-row-reverse lg:gap-x-[598px]">
           <div className="lg:my-auto lg:text-sm">

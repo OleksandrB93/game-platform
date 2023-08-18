@@ -4,7 +4,7 @@ import InstaIcon from "../CustomIcons/InstaIcon";
 const OurContacts = () => {
   return (
     <div
-      className="mt-8 mb-12 p-5 bg-[#d9e4f9] w-[345px] mx-auto rounded-2xl 
+      className="mt-8 mb-12 p-5 bg-bg w-[345px] mx-auto rounded-2xl 
                 lg:w-[1111px] lg:p-10 lg:mr-0"
     >
       <img

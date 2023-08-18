@@ -8,7 +8,7 @@ const RecommendedGames = ({ games }: GameArrayProps) => {
   return (
     <div
       className="lg:relative w-full flex flex-col justify-center items-center mb-12 
-    lg:bg-[#d9e4f9] lg:rounded-2xl lg:max-w-[1696px] lg:mx-auto lg:py-10 lg:my-8"
+    lg:bg-bg lg:rounded-2xl lg:max-w-[1696px] lg:mx-auto lg:py-10 lg:my-8"
     >
       <img
         className="mb-8 hidden lg:block"
@@ -23,12 +23,12 @@ const RecommendedGames = ({ games }: GameArrayProps) => {
 
       <ul
         className="grid grid-cols-2 gap-4 mb-2
-                    lg:flex lg:gap-x-2 lg:bg-[#d9e4f9]"
+                    lg:flex lg:gap-x-2 lg:bg-bg"
       >
         {games.map((game) => (
           <li
             key={game.id}
-            className="relative rounded-2xl cursor-pointer hover:translate-y-[-1px] hover:shadow-lg transition"
+            className="relative rounded-2xl cursor-pointer hover:translate-y-[-1px] shadow-lg hover:shadow-cyan-500/50 transition"
           >
             <img
               className=" lg:min-w-[195px]"

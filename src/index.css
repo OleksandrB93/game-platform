@@ -54,7 +54,7 @@ body {
   display: flex;
   justify-content: center;
   @apply h-full w-full;
-  background-color: #fffbed;
+  /* background-color: #fffbed; */
 }
 
 code {
