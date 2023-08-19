@@ -80,6 +80,7 @@ const SliederSlide = ({
           />
           <p className="text-[10px] lg:text-[14px] text-textLink">
             {text}
+            {/* {t(`sliderTexts.${text}`)} */}
           </p>
           {bage && (
             <div className="absolute z-100 -top-[12px] right-0 flex justify-center items-center w-6 h-6 rounded-full bg-red">
